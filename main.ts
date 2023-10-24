@@ -9,8 +9,8 @@ basic.clearScreen()
 basic.showIcon(IconNames.Duck)
 
 // variables
-const firstNumber : number = randint(0, 99)
-const secondNumber : number = randint(0, 99)
+const firstNumber: number = randint(0, 99)
+const secondNumber: number = randint(0, 99)
 
 // show 1st number
 input.onButtonPressed(Button.A, function () {
@@ -30,7 +30,7 @@ input.onGesture(Gesture.Shake, function () {
   if (firstNumber < secondNumber) {
     basic.showString(firstNumber.toString() + '<' + secondNumber.toString())
   } else {
-      basic.showString(firstNumber.toString() + '>' + secondNumber.toString())
+    basic.showString(firstNumber.toString() + '>' + secondNumber.toString())
   }
   basic.showIcon(IconNames.Sad)
 })
