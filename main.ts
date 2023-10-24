@@ -6,29 +6,31 @@
 */
 
 basic.clearScreen()
-basic.showIcon(IconNames.Heart)
+basic.showIcon(IconNames.Duck)
 
 // variables
-let firstNumber = randint(0, 99)
-let secondNumber = randint(0, 99)
+const firstNumber = randint(0, 99)
+const secondNumber = randint(0, 99)
 
 // show 1st number
-input.onButtonPressed(Button.A, function( ) {
+input.onButtonPressed(Button.A, function () {
   basic.clearScreen()
-  basic.showString('#1 : ' + firstNumber)
+  basic.showString('#1 : ' + firstNumber.toString())
 })
 
 // show 2nd number
 input.onButtonPressed(Button.B, function () {
   basic.clearScreen()
-  basic.showString('#2 : ' + secondNumber)
+  basic.showString('#2 : ' + secondNumber.toString())
 })
 
 // compare both numbers
-input.onGesture(Gesture.Shake, function() {
+input.onGesture(Gesture.Shake, function () {
+  basic.clearScreen()
   if (firstNumber < secondNumber) {
-    basic.showString(firstNumber + '<' + secondNumber)
+    basic.showString(firstNumber.toString() + '<' + secondNumber.toString())
   } else {
-    basic.showString(firstNumber + '>' + secondNumber)
+      basic.showString(firstNumber.toString() + '>' + secondNumber.toString())
   }
+  basic.showIcon(IconNames.Sad)
 })
