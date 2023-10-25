@@ -7,13 +7,12 @@ This module is a Micro:bit MicroPython program compares 2 random numbers from 0-
 from microbit import *
 from random import *
 
-
-display.clear()
-display.show(Image.DUCK)
-
 # variables
 first_number = randint(0, 99)
 second_number = randint(0, 99)
+
+display.clear()
+display.show(Image.DUCK)
 
 while True:
     # show 1st number
